@@ -1,0 +1,42 @@
+@use "../../styles/colors.scss";
+
+.welcome {
+  margin: 16px auto;
+
+  &__sub {
+    &-button {
+      max-width: 214px;
+      padding: 9px 0;
+      text-transform: uppercase;
+      color: colors.$lite-orange;
+      background: {
+        image: url("./images/backbtn.svg");
+        repeat: no-repeat;
+        position: center center;
+      }
+    }
+  }
+
+  &__title {
+    margin: 16px 0;
+    font-size: 32px;
+    font-weight: bolder;
+    line-height: 120%;
+
+    color: colors.$white;
+    & span {
+      color: colors.$lite-orange;
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 160%;
+    color: colors.$white-opacity;
+    & span {
+      font-weight: bold;
+      color: colors.$white;
+    }
+  }
+}

@@ -1,12 +1,13 @@
 @use "./colors.scss";
 
 .wrapper {
-  max-width: 358px;
+  max-width: 364px;
+  padding: 0 16px;
 }
 
 .App {
   max-width: 390px;
   margin: 0 auto !important;
-
+  padding-bottom: 72px;
   background: colors.$black;
 }
