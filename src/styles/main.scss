@@ -1,0 +1,11 @@
+@use "./colors.scss";
+
+.body {
+  font-size: 12px;
+  background: colors.$black;
+  color: colors.$white;
+}
+.App {
+  max-width: 930px;
+  margin: 0 auto !important;
+}
