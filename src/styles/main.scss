@@ -1,11 +1,12 @@
 @use "./colors.scss";
 
-.body {
-  font-size: 12px;
-  background: colors.$black;
-  color: colors.$white;
+.wrapper {
+  max-width: 358px;
 }
+
 .App {
-  max-width: 930px;
+  max-width: 390px;
   margin: 0 auto !important;
+
+  background: colors.$black;
 }
