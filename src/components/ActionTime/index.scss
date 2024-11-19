@@ -1,0 +1,26 @@
+@use "../../styles/colors.scss";
+
+.action-time {
+  padding: 8px 0;
+  background-color: colors.$lite-orange;
+
+  &__content {
+    &-icon {
+      width: 20px;
+      height: 20px;
+      object-fit: cover;
+    }
+
+    &-title {
+      margin-left: 6px;
+
+      font-weight: normal;
+      text-transform: uppercase;
+      color: colors.$black;
+
+      & span {
+        font-weight: bold;
+      }
+    }
+  }
+}
