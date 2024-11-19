@@ -12,12 +12,14 @@ const Header = ({date}) => {
                 <img
                     className="header__logo"
                     src={logo}
+                    loading={"lazy"}
                     alt="logo"
                 />
 
                 <img
                     className="header__basket cursor-pointer header__width-wrapp"
                     src={IconBasket}
+                    loading={"lazy"}
                     alt="basket-logo"
                 />
             </div>

@@ -22,7 +22,12 @@ const Welcome = ({textButton, primaryTitle, title}) => {
                     </span>
                     {" "}Limited Edition Jack Daniel's Sinatra Century!
                 </p>
-                <img src={ImageJackDaniels} alt=""/>
+                <img
+                    className="welcome__banner"
+                    loading={"lazy"}
+                    src={ImageJackDaniels}
+                    alt="banner"
+                />
             </section>
             <section className="section welcome__info wrapper m-auto">
                 <p className="welcome__description">
