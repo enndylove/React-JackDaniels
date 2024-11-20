@@ -1,0 +1,55 @@
+@use "../../styles/colors.scss";
+
+.processing {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  &__content {
+    &-title {
+      line-height: 100% !important;
+    }
+    &-progress {
+      margin-top: 16px;
+      height: 4px;
+      overflow: hidden;
+      background-color: rgba(255, 255, 255, 0.12);
+
+      & span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0%;
+        height: 100%;
+        transition: 1s .5s cubic-bezier(0.63, -0.46, 0, 1.01);
+        background-color: colors.$lite-orange;
+      }
+    }
+  }
+
+  &__part {
+    &-title {
+      margin-left: 8px;
+      font-size: 16px;
+      font-weight: bolder;
+      line-height: 150%;
+      color: colors.$white;
+    }
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+      object-fit: cover;
+      opacity: .2;
+    }
+
+    & + & {
+      margin-top: 8px;
+    }
+    &s {
+      margin-top: 24px;
+    }
+  }
+}

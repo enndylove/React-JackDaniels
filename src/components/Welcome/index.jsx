@@ -1,6 +1,5 @@
 import './index.scss'
 
-import ImageJackDaniels from './images/jackdaniels.png'
 
 const Welcome = ({textButton, primaryTitle, title}) => {
     return(
@@ -24,8 +23,7 @@ const Welcome = ({textButton, primaryTitle, title}) => {
                 </p>
                 <img
                     className="welcome__banner"
-                    loading={"lazy"}
-                    src={ImageJackDaniels}
+                    src={require('./images/jackdaniels.png')}
                     alt="banner"
                 />
             </section>

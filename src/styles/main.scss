@@ -10,4 +10,8 @@
   margin: 0 auto !important;
   padding-bottom: 72px;
   background: colors.$black;
+
+  &.full-height {
+    height: 100vh;
+  }
 }

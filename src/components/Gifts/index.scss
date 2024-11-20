@@ -1,0 +1,104 @@
+@use "../../styles/colors.scss";
+
+.gifts {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+
+  &__container {
+    margin-top: 24px;
+    max-width: 326px;
+    grid-template-columns: repeat(3, 108px);
+
+    @media screen and (max-width: 340px) {
+      grid-template-columns: repeat(3, 97px);
+    }
+  }
+
+  &__try {
+    padding: 12px 0;
+    color: colors.$white;
+    background: rgba(255, 255, 255, 0.06);
+    border: 2px solid transparent;
+    transition: .5s;
+
+    & + & {
+      margin-left: 8px;
+    }
+
+    &.this {
+      border: 2px solid colors.$lite-orange;
+
+      color: colors.$lite-orange;
+      background: transparent;
+    }
+  }
+
+  &__gif {
+    max-width: 108px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__content {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    background: #0A0A0A;
+    padding: 24px;
+
+    &-image {
+      height: 185px;
+      object-fit: contain;
+    }
+
+    &-title {
+      margin-top: 24px;
+      font-size: 32px;
+      font-weight: bolder;
+      color: colors.$white
+    }
+
+    &-description {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: bolder;
+      line-height: 150%;
+      color: colors.$white
+    }
+
+    &-sup {
+      margin-top: 10px;
+      &title {
+        font-size: 24px;
+        font-weight: bolder;
+        margin-top: 24px !important;
+      }
+    }
+
+    &-info {
+      font-size: 16px;
+      font-weight: normal;
+      color: colors.$white-opacity;
+    }
+    &-btn {
+      margin-top: 24px;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: bolder;
+      text-transform: uppercase;
+      color: colors.$black;
+      background-color: colors.$lite-orange;
+      &-icon {
+        margin-left: 6px;
+        width: 24px;
+        height: 24px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__result {
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+  }
+}

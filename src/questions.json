@@ -1,0 +1,36 @@
+{
+  "questions": [
+    {
+      "title": "Question 1 of 4: Are you a man or a woman?",
+      "buttons": [
+        "Man",
+        "Woman"
+      ]
+    },
+    {
+      "title": "Question 2 of 4: How old are you?",
+      "buttons": [
+        "18-29",
+        "30-39",
+        "40-49",
+        "50+"
+      ]
+    },
+    {
+      "title": "Question 3 of 4: How many members are in your family?",
+      "buttons": [
+        "Alone",
+        "1",
+        "2",
+        "3+"
+      ]
+    },
+    {
+      "title": "Question 4 of 4: Have you bought anything at Jack Daniel's before?",
+      "buttons": [
+        "NO",
+        "YES"
+      ]
+    }
+  ]
+}

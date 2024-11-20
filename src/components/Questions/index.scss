@@ -1,0 +1,91 @@
+@use '../../styles/colors.scss';
+$default-border: 1px solid rgba(255, 255, 255, 0.12);
+
+.questions {
+  margin: 16px auto 0;
+
+  &__content {
+    padding: 24px 16px;
+    border: $default-border;
+    background-color: rgba(255, 255, 255, 0.04);
+
+    &-title {
+      margin-top: 16px;
+
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 120%;
+    }
+
+    &-plants {
+      & span {
+        height: 4px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.12);
+
+        &.primary {
+          background-color: colors.$lite-orange;
+        }
+
+        &:not(:first-child) {
+          margin-left: 8px;
+
+        }
+      }
+    }
+
+    &-btn {
+      font-size: 16px;
+      text-transform: uppercase;
+      padding: 12px 0;
+      color: colors.$lite-orange;
+      border: 2px solid colors.$lite-orange;
+      background-color: transparent;
+      transition: .5s;
+
+      &:hover {
+        color: colors.$black;
+        background-color: colors.$lite-orange;
+      }
+
+      & + & {
+        margin-top: 8px;
+      }
+
+      &s {
+        margin-top: 24px;
+      }
+    }
+
+    &-nav {
+      padding: 16px 11px;
+      background-color: #0A0A0A;
+      border-left: $default-border;
+      border-bottom: $default-border;
+      border-right: $default-border;
+
+      & span {
+        font-weight: bolder;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        text-transform: capitalize;
+
+        color: colors.$lite-orange;
+
+        &:not(:first-child) {
+          &:before {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            left: 0;
+            top: 0;
+
+            background-color: rgba(255, 255, 255, 0.36);
+          }
+        }
+      }
+    }
+  }
+}
