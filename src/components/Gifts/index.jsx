@@ -67,10 +67,7 @@ const Gifts = ({winBox}) => {
                     ))}
                 </div>
             </section>
-
-            {isWin && (
-                <Result win={true} key={"ResultWin"} />
-            )}
+            
             {isWin && (
                 <Result win={true} key={"ResultWin"} />
             )}
