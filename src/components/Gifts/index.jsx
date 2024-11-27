@@ -1,6 +1,5 @@
 import "./index.scss";
 import Gif from "./asset/Gif";
-import GifLose from "./images/gif_lose.mp4";
 import {useEffect, useState} from "react";
 import Result from "./asset/Result";
 
@@ -60,7 +59,6 @@ const Gifts = ({winBox}) => {
                         <Gif
                             key={i}
                             win={box}
-                            loseSrc={GifLose}
                             onAttempt={handleAttempt}
                             attempts={attempts}
                         />

@@ -39,6 +39,43 @@
     max-width: 108px;
     height: auto;
     object-fit: cover;
+    overflow: hidden;
+
+    &-top {
+      z-index: 3;
+      left: 50%;
+      transform: translate(-48%, 48%);
+      transition: 0.5s;
+    }
+
+    &-prize {
+      z-index: 2;
+      top: 26%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: .5s;
+    }
+
+    &-bottom {
+      z-index: 1;
+    }
+
+    &.true {
+      & .gifts__gif-top {
+        &.true {
+          left: 35%;
+          top: -100% !important;
+        }
+
+        left: 35%;
+        top: -12% !important;
+        transform: translate(-48%, 48%) rotate(-27deg);
+
+      }
+      & .gifts__gif-prize {
+        opacity: 1;
+      }
+    }
   }
 
   &__content {

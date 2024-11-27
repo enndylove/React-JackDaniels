@@ -1,27 +1,33 @@
-import GifWin from '../images/gif_win.mp4';
-import {useRef} from "react";
+import BoxBottom from '../images/box_bottom.svg';
+import BoxTop from '../images/box_top.svg';
+import BoxPrize from '../images/prize.svg';
+import {useState} from "react";
 
-const Gif = ({ win, loseSrc, onAttempt, attempts  }) => {
-    const videoRef = useRef(null);
-
+const Gif = ({ win, onAttempt, attempts }) => {
+    const [stateOpen, setStateOpen] = useState(false);
 
     const openBox = () => {
         if (attempts >= 3) return;
-        if (videoRef.current) {
-            videoRef.current.play();
-        }
+        setStateOpen(true)
         onAttempt(win);
     };
+
     return (
-        <video
-            className="gifts__gif cursor-pointer w-full"
-            ref={videoRef}
-            onClick={openBox}
-            controls={false}
+        <div
+            className={`gifts__gif ${stateOpen} cursor-pointer w-full`}
+            onClick={() => openBox()}
         >
-            <source src={win ? GifWin : loseSrc} type="video/mp4"/>
-        </video>
-    );
+            <div className="gifts__gif-wrapper relative">
+                {
+                    win ? (
+                        <img src={BoxPrize} alt="box-prize" className="gifts__gif-prize absolute left-2/4"/>
+                    ) : <></>
+                }
+                <img src={BoxBottom} alt="box-bottom" className="gifts__gif-bottom relative"/>
+                <img src={BoxTop} alt="bot-top" className={`gifts__gif-top ${win} absolute top-0`}/>
+            </div>
+        </div>
+    )
 };
 
 export default Gif;
